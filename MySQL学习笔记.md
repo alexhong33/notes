@@ -176,7 +176,7 @@ drop table 表名;
 > select * from students where hometown is not null and gender=0;
 
 
-## 优先级
+### 优先级
 
 * 小括号 > not > 比较运算符 > 逻辑运算符
 * and 比 or 先运算, 如果同时出现并希望先算or, 需要结合()使用
@@ -212,3 +212,40 @@ drop table 表名;
 # 子查询
 查找未删除的最小编号的学生信息
 > select * from students2 where id=(select min(id) from students2 where isdelete=0);
+
+
+
+# 分组
+
+* 查询男女总数
+
+> select gender as 性别,count(*) from students group by gender;
+
+
+## where 对比 having
+
+* where是对from后面指定的表进行数据筛选, 属于对原始数据的筛选
+* having是对group by的结果进行筛选
+
+
+#### 查询男生总人数
+
+* 方案1:
+> select count(*) from students2 where gender=1;
+
+* 方案2:
+> select gender as 性别,count(*) from students group by gender having gender=1;
+
+
+# 排序
+
+* asc 从小到大排序, 升序
+* desc 从大到小排序, 降序
+
+>　select * from 表名 order by 列1 asc|desc, 列2 asc|desc, ..
+
+#### 将行数据按照列1进行排序, 如果某些行列1的值相同, 则按照列2排序, 以此类推.
+
+* 查询未删除男学生信息
+> select * from students where gender=1 and isdelete=0 order by id desc;
+

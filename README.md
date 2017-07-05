@@ -17,3 +17,8 @@
 ### 更新本地库
 1. git fetch origin master 更新提取
 2. git merge origin/master 合并到本地库
+
+
+### 补充
+1. git status 查看状态
+2. git clone git@github.com:michaelliao/gitskills.git 克隆远程仓库

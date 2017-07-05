@@ -1,5 +1,7 @@
 ## Ubuntu下的MySQL
 
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'admin' WITH GRANT OPTION;  
+
 * 检测是否已经安装MySQL
 > sudo netstat -tap | grep mysql
 
@@ -19,3 +21,8 @@
 > sudo mysqladmin -u root password newpassword
 
 
+## Mysql授权
+如果你想允许用户root从ip为192.168.1.6(或任意主机'%')的主机连接到mysql服务器，并使用admin作为密码
+> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'admin' WITH GRANT OPTION;  
+>    
+> FLUSH   PRIVILEGES;  

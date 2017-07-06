@@ -249,3 +249,134 @@ drop table 表名;
 * 查询未删除男学生信息
 > select * from students where gender=1 and isdelete=0 order by id desc;
 
+
+
+# 分页
+
+* 当数据量过大时, 在一页中查看数据是一件非常麻烦的事情
+
+> select * from 表名 limit start,count
+
+* 注意!! start索引从0开始
+* 从start开始, 获取count条数据
+
+> select * from students2 limit 1,3;
+
+* 从索引为1的条目开始, 共加载3条数据
+
+
+
+# 总结 
+
+#### 执行顺序
+
+* from 表名
+* where ...
+* group by ...
+* select distinct *
+* having ...
+* order by ...
+* limit star,count
+
+
+# 高级 DAY 03
+
+	create table scores(
+	id int primary key auto_increment,
+	stuid int,
+	subid int,
+	score decimal(5,2),
+	foreign key(stuid) references students(id),
+	foreign key(subid) references subjects(id)
+	);
+
+*　插入数据
+> insert into scores values(0,100,1,1);
+
+
+
+
+### 连接查询
+
+####三种连接方式
+
+
+* 表A inner join 表B
+	* 表A与表B匹配的行会出现在结果中
+* 表A left join 表B:
+	* 表A与表B匹配的行会出现在结果中, 外加表A中独有的数据, 未对应的数据使用null填充
+* 表A right join 表B:
+	* 表A与表B匹配的行会出现在结果中, 外加表B中独有的数据, 未对应的数据使用null填   
+
+
+##### 创建一个新表 包含name, titile, score三列
+
+
+
+* 方案1:
+
+>	
+	select students.name,subjects.title,scores.score
+	from scores
+	inner join students on scores.stuid=students.id
+	inner join subjects on scores.subid=subjects.id;
+
+
+* 方案2:
+	
+>
+	select students.name,subjects.title,scores.score
+	from students
+	inner join scores on scores.stuid=students.id
+	inner join subjects on scores.subid=subjects.id;
+		
+
+##### 连接两个表(拼凑)
+	select * from scores
+	from scores
+	inner join students on students.id=scores.stuid
+
+
+* left join, 以左表为基准
+
+> select * 
+> from scores left join students on students.id=scores.stuid;
+
+* right join, 以右表为基准
+
+> select *
+> from scores right join students on students.id=scores.stuid;
+
+
+### 例子
+
+* 查询学生的姓名和平均分
+
+> select students.name,avg(scores.score)
+> from scores
+> inner join students on scores.stuid=students.id
+> group by students.name
+
+
+* 查询男生的姓名和总分
+
+> select subjects.name,avg(scores.score)
+> from scores
+> inner join students on scores.stuid=students.id
+> where students.gender=1
+> group by students.name;
+
+* 查询科目的名称和平均分
+
+> select subjects.title,avg(scores.score)
+> from scores
+> inner join subjects on scores.subid=subjects.id
+> group by subjects.title;
+
+* 查询未删除科目的名称, 最高分, 平均分
+> select subjects.title,avg(scores.score),max(scores.score)
+> from scores
+> inner join subjects on scores.subid=subjects.id
+> where subjects.isdelete=0
+> group by subjects.title;
+

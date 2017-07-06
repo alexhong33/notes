@@ -380,3 +380,68 @@ drop table 表名;
 > where subjects.isdelete=0
 > group by subjects.title;
 
+
+* 查询 姓名和每个人的总分
+> select name,sum(score)
+> from students
+> inner join scores on students.id=scores.stuid
+> where gender=1
+> group by students.id;
+
+
+
+# 自关联
+
+> create table areas(
+> id int primary key,
+> title varchar(20),
+> pid int,
+> foreign key(pid) references areas(id));
+
+
+
+# 视图
+
+* 对于复杂的查询，　在多次使用后，　维护是一件非常麻烦的事情
+* 解决方法：　定义视图
+* 视图本质就是对查询的一个封装
+
+##### 定义视图
+
+> create view v_1 as
+> select stu.*,sco.score,sub.title from scores as sco
+> inner join students as stu on sco.stuid=stu.id
+> inner join subjects as sub on sco.subid=sub.id;
+
+##### 视图的用途: 方便查询
+ 
+> show table;
+
+> select * from v_1;
+
+
+# 事务
+
+* 要求: 表的类型必须是innobd或bdb类型, 才可以对此表使用事务
+* 事务四大特性(简称ACID)
+	* 原子性 Atomicity
+	* 一致性 Consistency
+	* 隔离性 Isolation
+	* 持久性 Durability 
+
+* 使用事务可以完成退回的功能, 保证业务逻辑的正确性
+* 当一个业务逻辑需要多个sql完成时, 如果其中某条sql语句出错, 则希望整个操作都退回
+
+* 查看表的创建语句
+
+> show create table students;
+
+* 修改表的类型
+
+> alter table '表名' engine=innobd;
+
+* 事务语句
+
+	* 开启 begin;
+	* 提交 commit;
+	* 回滚 rollback;

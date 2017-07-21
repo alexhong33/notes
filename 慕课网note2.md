@@ -3,9 +3,22 @@
 	* Scrapy 架构解析
 * Section 2 
 	* User-Agent 解析
-	* 设置随即取UA		 
+	* 设置随即取UA
+	* fake_useragent		 
+	* scrapy-proxies
 
+* Section 3
+	* 验证码识别方法
+	* 编码实现(tesseract-ocr) (开发难度大, 识别略低, 不建议使用)
+	* 在线打码 (代码识别技术)
+	* 人工打码 
 
+* Section 4
+	* Scrapy的配置
+	* cookie_enable
+	* download_delay
+	* autothrottle_enabled
+	* custom_settings 使用 自定义设置
 
 
 

@@ -6,6 +6,10 @@
 	* 设置随即取UA
 	* fake_useragent		 
 	* scrapy-proxies
+	* scrapy-crawlera 动态IP配置 官网提供 收费的话建议使用
+	
+
+#### 最好限速爬虫 珍惜自己的IP 代理速度更慢
 
 * Section 3
 	* 验证码识别方法
@@ -17,11 +21,15 @@
 	* Scrapy的配置
 	* cookie_enable
 	* download_delay
-	* autothrottle_enabled
+	* autothrottle_enabled 自动限速扩张
 	* custom_settings 使用 自定义设置
 
-
-
+* Section 5
+	* 自己写 动态设置IP设置
+	* 框架1 scrapy proxies
+	* 框架2 scrapy crawlera
+	* Tor 洋葱网络 使用VPN 经过Tor 匿踪 稳定性>代理
+	
 1. 无状态请求
 2. 有状态请求
 

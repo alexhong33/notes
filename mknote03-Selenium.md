@@ -60,4 +60,18 @@
 
 ### 课程6 url去重
 
-* dupefilter.py
+##### scrapy>xlib包>
+* dupefilter.py(兼容版)
+* dupefilters.py
+#####原理
+
+>enqueue_request方法中>request_seen中实现了hashlib.sha1哈希后request_fingerprint放入一个set()进行去重
+
+
+
+1. 完成黄金寻宝app代码的编写
+2. 阅读黄金账户app和买卖金app的源码从中寻找可能出现的bug并提交改进
+
+1.
+发现一个bug使app启动迟缓, 用handler.postDelayed()代替Thread.sleep(), 达到展示广告页面5秒 进入主界面, 避免app出现先线程睡眠5秒再开启splash启动界面
+2. 屏幕底层

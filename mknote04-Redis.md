@@ -13,5 +13,9 @@
 * 在redis目录下打开cmd窗口输入
 * > redis-cli.exe -h 127.0.0.1 -p 6379
 
-[Redis中文官方网站](http://redis.cn/)
+[Redis中文官方网站](http://redis.cn/)  
+
+[Redis命令参考](http://doc.redisfans.com/)  
+
+[Vim编辑器命令大全](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html)
 

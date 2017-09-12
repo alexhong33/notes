@@ -1,0 +1,26 @@
+函数作用域
+
+四层作用域 (legb)
+
+	built-in < global < enclosing < local
+
+	x = int(2.9) # built-in
+
+	g_count = 2 # global
+	def outer():
+
+		o_count = 1 # enclosing
+		i_count = 8
+
+		def inner():
+			i_count = 2 # local
+			print(i_count)
+
+		inner()
+
+	outer()
+
+
+2. 
+	
+	使用关键字 global 和 nonlocal 实现闭包

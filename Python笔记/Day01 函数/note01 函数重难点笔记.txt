@@ -1,0 +1,30 @@
+重难点笔记
+
+
+1. 函数参数
+
+	参考链接 Py西游攻关之函数
+	http://www.cnblogs.com/yuanchenqi/articles/5828233.html
+
+		*args, **kwargs
+
+		def print_info(*args, **kwargs):
+			print(args)
+			print(kwargs)
+			for i in kwargs:
+				print('%s:%s' %(i, kwargs[i]))
+
+
+	# 关于不定长参数的位置: 
+		*args 放在左边
+		**kwargs 放在右边
+
+	# 如果有默认参数, 放左边
+
+	关键参数>默认参数>不定长参数(*args>**kwargs)
+	如: def func(name, age=22, *args, **kwargs)
+
+2. 默认参数
+
+
+ 

@@ -1,0 +1,13 @@
+Return
+
+
+1. 
+	
+	def f():
+		print('ok')
+
+		return None
+
+	不写return时默认返回None
+
+

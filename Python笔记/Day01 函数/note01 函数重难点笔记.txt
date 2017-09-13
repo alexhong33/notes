@@ -27,4 +27,26 @@
 2. 默认参数
 
 
+	*args 的技巧 直接输出
+		def f(*args):
+			print(args)
+
+		f(1,2,3)
+
+		输出>> ([1,2,3],)
+
+		f(*[1,2,3])
+
+		输出>> (1, 2, 3)
+
+	**kwargs 的技巧
+
+		def f2(**kwargs):
+			print(kwargs)
+
+		f2(**{'name':'alex'})
+
+		输出>> {'name':'alex'}
+
+
  

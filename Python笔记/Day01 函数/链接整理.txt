@@ -1,0 +1,16 @@
+链接整理
+
+Py西游攻关之  基础数据类型
+	http://www.cnblogs.com/yuanchenqi/articles/5782764.html
+
+Py西游攻关之  函数
+	http://www.cnblogs.com/yuanchenqi/articles/5828233.html
+
+Py西游攻关之  迭代器&生成器
+	http://www.cnblogs.com/yuanchenqi/articles/5769491.html
+
+Py西游攻关之  装饰器
+	http://www.cnblogs.com/yuanchenqi/articles/5694897.html
+
+武沛齐
+	http://www.cnblogs.com/wupeiqi/

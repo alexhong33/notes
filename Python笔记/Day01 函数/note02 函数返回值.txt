@@ -11,3 +11,21 @@ Return
 	不写return时默认返回None
 
 
+2.	
+重点 
+	#a 函数名可以进行复制
+	#b 函数名可以作为函数参数(高阶函数), 还可以作为函数的返回值(下面例子)
+
+	def foo3():
+
+		def inner():
+
+			return 8
+
+		return inner
+
+	ret = foo3()
+
+	print(ret)  # 打印出一个内存地址 指向 8
+	print(ret()) # 打印出 8
+

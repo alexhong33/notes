@@ -1,0 +1,5 @@
+
+三个重要内置函数
+1. reduce
+2. map
+3. lambda

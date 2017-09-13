@@ -1,0 +1,36 @@
+递归函数
+
+
+1
+		def fact(n):
+			if n == 1:
+				return 1
+			return n*fact(n-1)
+
+
+		print(fact(5))
+
+		# 关于递归
+			1. 调用自身函数
+			2. 有一个结束条件
+
+
+		# 递归可以写的, 循环都可以解决
+
+		# 递归在很多时候效率都比较低, 不推荐使用
+
+
+2
+
+		(斐波那契数列)
+
+		def fibo(n):
+			# before = 0
+			# after = 1
+			if n <= 2:
+				return n
+			return fibo(n-1) + fibo(n-2)
+
+		print( fibo(8) )
+
+

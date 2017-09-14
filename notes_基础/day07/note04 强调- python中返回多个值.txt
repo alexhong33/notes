@@ -1,0 +1,22 @@
+
+
+# python 中返回多个值
+
+sh → 赋值 → shang
+yu → 赋值 → yushu
+-------------------------------
+
+def divid(a, b):
+	shang = a//b
+	yushu = a%b
+	return shang, yushu
+
+sh, yu = divid(5, 2)
+
+print(sh)
+print(yu)
+
+--------------------------------
+
+输出>> 5
+输出>> 1

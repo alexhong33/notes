@@ -1,0 +1,91 @@
+
+1.
+
+def sum_2_nums(a, b, *args):
+	print("-"*30)
+	print(a)
+	print(b)
+	print(args)
+
+sum_2_nums(11, 22, 33, 44, 55, 66, 77)
+sum_2_nums(11, 22, 33)
+sum_2_nums(11, 22)
+sum_2_nums(11) # 错误
+
+输出结果
+
+-----------------------------------------
+11
+22
+(33, 44, 55, 66, 77)
+-----------------------------------------
+11
+22
+(33, )
+-----------------------------------------
+11
+22
+()
+-----------------------------------------
+
+
+注意 1
+
+def test(a,b,c=33,*args)
+	print(a)
+	print(b)
+	print(c)
+	print(args)
+test(1,22,33,44,55)
+
+输出结果
+1
+22
+33
+(44,55)
+
+
+
+2.
+
+def test(a,b,c=33,*args,**kwargs):
+	print(a)
+	print(b)
+	print(c)
+	print(args)
+	print(kwargs)
+
+test(11, 22, 33, 44, 55, 66, 77, task=88, done=80)
+
+输出结果
+
+11,
+22,
+33,
+(44, 55, 66, 77)
+{'done':80, 'task':88}
+
+
+
+3. 取出不定长参数的值
+
+def sum_2_nums(a, b, *args):
+	print("-"*30)
+	print(a)
+	print(b)
+	print(args)
+
+	result = a + b
+	for num in args:
+		result+=num
+	print("result=%d"%result)
+
+sum_2_nums(11, 22, 33)
+
+输出结果:
+
+--------------------------------
+11
+22
+(33,)
+result=66

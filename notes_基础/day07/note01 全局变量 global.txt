@@ -1,14 +1,14 @@
 # 使用global 来重定义 全局变量
 
-wendu = 0
+	wendu = 0
 
-def get_wendu():
-	global wendu
-	wendu = 33
+	def get_wendu():
+		global wendu
+		wendu = 33
 
-def print_wendu():
-	print("温度是%d" %wendu )
+	def print_wendu():
+		print("温度是%d" %wendu )
 
 
-get_wendu()
-print_wendu()
+	get_wendu()
+	print_wendu()

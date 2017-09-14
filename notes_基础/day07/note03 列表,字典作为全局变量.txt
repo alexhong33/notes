@@ -1,0 +1,19 @@
+	
+# 列表和字典作为全局变量的时候 可以不加global
+
+	nums = [11, 22, 33]
+	info = {"name":"Alex"}
+
+	def test():
+		nums.append(44)
+		info['age'] = 25
+
+	def test2():
+		print(nums)
+		print(info)
+
+	test()
+	test2()
+
+	输出>> [11, 22, 33, 44]
+	输出>> {"name":"Alex", "age":"25"}

@@ -1,0 +1,23 @@
+#coding=utf-8
+
+def test(a,b,func):
+	result = func(a,b)
+	print(result)
+
+func_new = input("请输入一个匿名函数:")
+func_new = eval(func_new)
+
+
+test(11,22,func_new)
+
+
+执行结果:
+
+请输入一个匿名函数: lambda x,y:x+y
+33
+
+
+
+
+# 当使用input的时候, python3中认为是传入一个 str的值
+# 使用eval后, 可以去掉双引号, 使他成为可以用的匿名函数

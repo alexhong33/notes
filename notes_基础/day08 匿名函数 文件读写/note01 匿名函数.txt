@@ -1,0 +1,48 @@
+1
+
+# 匿名函数
+
+lambda 参数:式子
+
+lambda x,y:x+y
+
+变量 = lambda x,y:x+y
+
+
+
+2
+
+# 匿名函数 与 普通函数 的区别是 默认带有return返回
+
+相当于 冒号后面的式子 相当于 return x+y
+
+
+
+3
+
+# 简单的函数 可以用lambda
+# 复杂功能的用def
+
+
+4
+
+info=[
+	{'age':18, 'name':'Tim'},
+	{'age':20, 'name':'Nicky'},
+	{'age':23, 'name':'Jason'}
+	]
+
+根据年龄排序
+
+info.sort(key=lambda x:x['age'])
+
+
+
+5  高级应用
+
+def test(a, b, func):
+	result = func(a, b)
+	print(result)
+
+
+test(11, 12, lambda x,y:x+y)

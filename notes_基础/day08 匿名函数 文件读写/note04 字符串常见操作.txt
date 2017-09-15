@@ -1,0 +1,18 @@
+1. 查找	
+
+
+	myStr =  "hello world"
+
+	myStr.find("hello") 返回 0 如果没找到 返回 -1
+	myStr.index("hello") 返回 0 如果没找到 报错
+
+	myStr.rfind() 从右边查找
+	myStr.rindex()
+
+
+2. 统计
+
+    myStr.count('hello') 返回1  (出现个数)
+
+
+

@@ -1,0 +1,11 @@
+
+readline 返回的是一个list列表, 每一行为一个字符串
+
+
+f = open("test.txt")
+
+content = f.readlines()
+print(content)
+
+f.close()
+

@@ -1,0 +1,48 @@
+1
+-------------------------
+f = open('test.txt', 'w')
+f.close()
+
+
+
+	r
+	w
+	a (末尾追加)
+
+	r+
+	w+
+	a+
+
+	---------------------------
+
+	rb
+	wb
+	ab
+
+	rb+
+	wb+
+	ab+
+
+------------------------------------
+
+2
+写
+
+f=open("c:\\test.txt", "w")
+f.write("Hello")
+f.close()
+
+
+读
+f=open("c:\\test.txt", "r")
+f.read(1) 读一个词
+f.read() 读全文
+
+		
+		# 读并打印
+
+		f=open("c:\\test.txt", "r")
+		content = f.read()
+		print(content)
+		f.close()
+

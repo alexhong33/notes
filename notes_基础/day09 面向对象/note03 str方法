@@ -1,0 +1,43 @@
+
+# 设置 __str__  方法 可以使print打印出对象 自定义 的 描述信息
+# 否则打印对象为  内存地址 
+
+class Cat:
+	""" 定义了一个Cat类 """
+
+	# 初始化对象
+	def __init__(self, new_name, new_age):
+		self.name = new_name
+		self.name = new_age
+
+	def __str__(self):
+		return "%s的年龄是:%d" % (self.name, self.age)
+
+	# 方法
+	def eat(self):
+		print("猫在吃鱼....")
+
+	def drink(self):
+		print("猫在喝水...")
+
+	def introduce(self)
+		print("%s的年龄是:%d" % (self.name, self.age))
+
+
+# 创建对象
+tom = Cat("汤姆", 40)
+lanmao = Cat("蓝猫", 10)
+
+
+print(tom)
+print(lanmao)
+
+
+-----------------------------
+
+输出结果>>
+
+
+
+汤姆的年龄是40
+蓝猫的年龄是10

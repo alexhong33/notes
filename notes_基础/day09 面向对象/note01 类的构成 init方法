@@ -1,0 +1,62 @@
+类的构成
+
+类(Class) 由3个部分构成
+
+    类的名称:类名
+    类的属性:一组数据
+    类的方法:允许对进行操作的方法 (行为)
+
+
+<1> 举例：
+
+1）人类设计,只关心3样东西:
+
+    事物名称(类名):人(Person)
+    属性:身高(height)、年龄(age)
+    方法(行为/功能):跑(run)、打架(fight)
+
+2）狗类的设计
+
+    类名:狗(Dog)
+    属性:品种 、毛色、性别、名字、 腿儿的数量
+    方法(行为/功能):叫 、跑、咬人、吃、摇尾巴
+
+
+
+
+-------------------------------------------
+
+2 __init__ 方法
+
+
+
+
+
+class Cat:
+	""" 定义了一个Cat类 """
+
+	# 初始化对象
+	def __init__(self, new_name, new_age):
+		self.name = new_name
+		self.name = new_age
+
+	# 方法
+	def eat(self):
+		print("猫在吃鱼....")
+
+	def drink(self):
+		print("猫在喝水...")
+
+	def introduce(self)
+		print("%s的年龄是:%d" % (self.name, self.age))
+
+
+# 创建对象
+tom = Cat("汤姆", 40)
+tom.eat()
+tom.drink()
+tom.introduce()
+
+
+lanmao = Cat("蓝猫", 10)
+lanmao.introduce()

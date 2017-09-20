@@ -1,0 +1,16 @@
+class Dog:
+	
+	# 程序临死前 都会调用此方法
+	def __del__(self):
+		print("---- 英雄over ----")
+
+
+dog1 = Dog()
+dog2 = dog1
+
+# 删除引用, 并没有删除对象
+del dog1
+
+# 此时对象真正被删除 
+del dog2 
+print("============")

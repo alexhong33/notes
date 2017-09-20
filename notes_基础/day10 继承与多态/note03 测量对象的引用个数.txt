@@ -1,0 +1,26 @@
+import sys
+
+sys.getrefcount()
+
+class T:
+	pass
+
+
+t = T()
+sys.getrefcount(t)
+
+输出 >>> 2 # 比实际的多1  因为在getrefcount中调用了一次 所以比实际的多1
+
+tt = t
+
+sys.getrefcount(t)
+
+输出 >>> 3
+
+
+del tt
+
+sys.getrefcount(t)
+
+输出 >>> 2
+

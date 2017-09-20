@@ -1,0 +1,41 @@
+1. 私有属性, 私有方法不能被子类调用
+2. 公有方法内的 私有属性和私有方法 可以被 子类调用
+
+
+class A:
+	def __init__(self):
+		self.num1 = 100
+		self.__num2 = 200
+
+	def test1(self):
+		print("-----test1------")
+
+	# 私有方法
+	def __test2(self):
+		print("--------test2--------")
+
+
+	def test3(self):
+		self.__test2()
+		print(self.__num2)
+
+class B(A):
+	def test4(self):
+		self.__test2()
+		print(self.__num2)
+
+
+
+b = B()
+
+b.test3()
+
+>>> 输出
+
+200
+---------test2---------
+
+
+b.test4()
+
+>>> 输出 报错

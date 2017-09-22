@@ -1,0 +1,23 @@
+
+使用__all__ 当其他程序调用时, 只会运行列表中的test1, Test
+其他调用不了
+
+
+
+如果一个文件中有__all__变量，那么也就意味着这个变量中的元素，不会被from xxx import *时导入
+
+
+__all__ = ["test1", "Test"]
+
+def test1():
+	print("----test1-----")
+
+def test1():
+	print("----test2-----")
+
+num = 100
+
+class Test(object)
+	pass
+
+
